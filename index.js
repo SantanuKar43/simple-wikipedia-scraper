@@ -12,5 +12,7 @@ var request = require('request');
 // }).end();
 
 request.get('https://en.wikipedia.org/wiki/bmw',function(err,response,body){
-  console.log(body);
+    if(err && err.code=="ETIMEDOUT") return console.log("Request timed out");
+    if(!err && response.statusCode==404) return console.log("error 404 occured")
+  console.log(body.match(/<p><b>(.*)<\/p>/)[0]);
 });
