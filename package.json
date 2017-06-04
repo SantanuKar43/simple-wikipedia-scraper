@@ -1,0 +1,23 @@
+{
+  "name": "simple-wikipedia-scraper",
+  "version": "1.0.0",
+  "description": "a scraper that gets the first paragraph from an wikipedia article",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SantanuKar43/simple-wikipedia-scraper.git"
+  },
+  "author": "santanu kar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SantanuKar43/simple-wikipedia-scraper/issues"
+  },
+  "homepage": "https://github.com/SantanuKar43/simple-wikipedia-scraper#readme",
+  "dependencies": {
+    "request": "^2.81.0"
+  }
+}
