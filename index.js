@@ -14,5 +14,5 @@ var request = require('request');
 request.get('https://en.wikipedia.org/wiki/bmw',function(err,response,body){
     if(err && err.code=="ETIMEDOUT") return console.log("Request timed out");
     if(!err && response.statusCode==404) return console.log("error 404 occured")
-  console.log(body.match(/<p><b>(.*)<\/p>/)[0]);
+  console.log(body.match(/<p><b>(.*)<\/p>/)[0].replace(/<[^<]+>/g,""));
 });
